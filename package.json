@@ -1,16 +1,31 @@
 {
   "name": "dsh-emotion-tower",
   "version": "3.1.0",
-  "title": "情绪沙塔",
   "description": "基于L层沙盒尖塔结构的连续情绪生成器。",
-  "author": "Nich / 大肥鱼情绪系统",
-  "license": "MIT",
+  "private": true,
+  "type": "module",
   "main": "./src/js/index.js",
+  "exports": {
+    ".": "./src/js/index.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "check": "node --check src/js/index.js",
+    "dev": "cd src/js && node index.js"
+  },
+  "license": "MIT",
+  "author": "Nich / 大肥鱼情绪系统",
   "dsh": {
-    "type": "plugin",
-    "entry": "./src/js/index.js",
-    "name": "emotion-tower",
-    "version": "3.1.0"
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "name": "emotion-tower"
   },
   "config": {
     "time_constant": 5.0,
