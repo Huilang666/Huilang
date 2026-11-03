@@ -1,0 +1,15 @@
+{
+  "name": "dsh-emotion-tower",
+  "version": "3.0.0",
+  "title": "情绪沙塔",
+  "description": "基于L层沙盒尖塔结构的连续情绪生成器。",
+  "author": "Nich / 大肥鱼情绪系统",
+  "license": "MIT",
+  "main": "./src/js/index.js",
+  "config": {
+    "time_constant": 5.0,
+    "max_events": 100,
+    "compute_freq": 1.0,
+    "output_format": "json"
+  }
+}
