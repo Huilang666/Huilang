@@ -1,0 +1,5 @@
+# dsh-emotion-tower bundle patch: inserts the emotion tower row into the
+# profile's plugin roster so it is loaded on boot.
+- insert:
+    - id: dsh-emotion-tower
+      name: 'emotion-tower'
